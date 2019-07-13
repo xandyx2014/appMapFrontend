@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Formulario Registro</mat-card-title>
+    <mat-card-subtitle>registro</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="myForm" class="example-form" fxLayout="column">
+
+      <mat-form-field class="example-full-width">
+        <input formControlName="descripcion" matInput placeholder="Descripcion" value=""  required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input formControlName="latitud" matInput  placeholder="latitud" value="" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input formControlName="longitud" matInput placeholder="longitud" value="" required >
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="enviar()"  mat-raised-button color="accent" [disabled]="myForm.invalid">Crear</button>
+  </mat-card-actions>
+</mat-card>
